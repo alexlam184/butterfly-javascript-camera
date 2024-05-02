@@ -14,13 +14,19 @@
     ></script>
   </head>
 
-  <body>
+  <div>
     <section class="section">
       <div class="container">
         <div class="columns">
           <div class="column is-four-fifths">
             <h1 class="title">JavaScript Camera</h1>
-            <video autoplay id="video"></video>
+            <body id="videoBody" class="loading">
+              <div class="frame">
+                <video autoplay id="CameraVideo"></video>
+                <div id="fps">FPS:</div>
+              </div>
+            </body>
+
             <button class="button is-hidden" id="btnPlay">
               <span class="icon is-small">
                 <i class="fas fa-play"></i>
@@ -62,5 +68,6 @@
 
     <canvas class="is-hidden" id="canvas"></canvas>
     <script src="camera.js"></script>
-  </body>
+    <script src="objectDetection.js"></script>
+  </div>
 </html>

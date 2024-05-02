@@ -8,7 +8,7 @@
   }
 
   // get page elements
-  const video = document.querySelector("#video");
+  const video = document.querySelector("#CameraVideo");
   const btnPlay = document.querySelector("#btnPlay");
   const btnPause = document.querySelector("#btnPause");
   const btnScreenshot = document.querySelector("#btnScreenshot");
@@ -90,6 +90,8 @@
       video.srcObject = videoStream;
     } catch (err) {
       alert("Could not access the camera");
+    } finally {
+      console.log("end of camera initialization");
     }
   }
 
