@@ -12,20 +12,46 @@
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"
+      integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/async/3.2.0/async.min.js"
+      integrity="sha512-6K6+H87tLdCWvY5ml9ZQXLRlPlDEt8uXmtELhuJRgFyEDv6JvndWHg3jadJuBVGPEhhA2AAt+ROMC2V7EvTIWw=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.roboflow.com/0.2.26/roboflow.js"></script>
+
+    <link rel="stylesheet" href="./main.css" />
   </head>
 
-  <div>
+  <body>
     <section class="section">
       <div class="container">
         <div class="columns">
           <div class="column is-four-fifths">
             <h1 class="title">JavaScript Camera</h1>
-            <body id="videoBody" class="loading">
-              <div class="frame">
-                <video autoplay id="CameraVideo"></video>
-                <div id="fps">FPS:</div>
-              </div>
-            </body>
+            <!-- <body id="videoBody" class="loading"> -->
+            <div class="loading frame" id="cameraFrame">
+              <video autoplay id="cameraVideo"></video>
+            </div>
+            <p>
+              FPS:
+              <span id="fps"></span>
+            </p>
+            <p>
+              Object Detected:
+              <span id="objectDetect"></span>
+            </p>
 
             <button class="button is-hidden" id="btnPlay">
               <span class="icon is-small">
@@ -59,15 +85,11 @@
 
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>
-          By <a href="https://www.webdevdrops.com/">Douglas Matoso</a> |
-          <a href="https://github.com/doug2k1/javascript-camera">Source code</a>
-        </p>
+        <p>By <a href="https://www.turned-e.com/">Turned-e</a></p>
       </div>
     </footer>
 
     <canvas class="is-hidden" id="canvas"></canvas>
-    <script src="camera.js"></script>
-    <script src="objectDetection.js"></script>
-  </div>
+    <script src="main.js"></script>
+  </body>
 </html>
