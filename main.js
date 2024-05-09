@@ -13,31 +13,23 @@
   const urlParams = new URLSearchParams(queryString);
 
   var model;
-  var publishable_key = "rf_MW0Oe1W9FiVJMKfgbAkrdjnYQqu1";
+  var publishable_key = "rf_RJz2Himf15Z3sn4QbZvSPZcEbBn1";
   var toLoad = {
-    model: "butterfly-fhrir",
+    model: "butterfly-nmqnt",
     version: 2,
   };
-  var deviceID = "161117297";
-  var oneNetApiKey = "KNUTSbBe6O5zyHYQWv=VkKiarJo=";
 
   key = urlParams.get("key");
   model = urlParams.get("model");
   version = urlParams.get("version");
-  // deviceID = urlParams.get("deviceID");
-  // oneNetApiKey = urlParams.get("oneNetApiKey");
 
   if (
     key &&
     model &&
     version &&
-    deviceID &&
-    oneNetApiKey &&
     key !== "" &&
     model !== "" &&
     version !== "" &&
-    // deviceID !== "" &&
-    // oneNetApiKey !== "" &&
     queryString !== ""
   ) {
     publishable_key = key;
@@ -50,7 +42,6 @@
   }
   console.log("Publishable key=", publishable_key);
   console.log("model=", model, " ,version=", version);
-  console.log("deviceID=", deviceID, " ,oneNetApiKey=", oneNetApiKey);
   console.log("End config");
 
   // get page elements
